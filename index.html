@@ -1,52 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-body, html {
-  height: 100%;
-  margin: 0;
-}
-
-.bgimg {
-  background-image: url('/w3images/forestbridge.jpg');
-  height: 100%;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  color: #bbb;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 25px;
-}
-
-.topleft {
-  position: absolute;
-  top: 0;
-  left: 16px;
-  font-size: 14px;
-}
-
-.bottomright {
-  position: absolute;
-  bottom: 0;
-  right: 16px;
-  font-size: 12px;
-}
-
-.middle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-hr {
-  margin: auto;
-  width: 40%;
-}
-</style>
-</head>	
+  <head>
+      <meta name="viewport" content="width=device-width,initial-scale=1 , maximum-scale=1  , minimum-scale= 1">
+      <link type="text/css" rel="stylesheet" href="style.css"  media="screen,projection"/>
+      
+  </head>
 
 <body>
 
@@ -57,7 +15,7 @@ hr {
   <div class="middle">
     <h1>COMING SOON</h1>
     <hr>
-    <p id="demo" style="font-size:30px"></p>
+    <p id="demo"></p>
   </div>
   <div class="bottomright">
     <p>Is developing by <a href="https://github.com/faslm">@faslm</a></p>
@@ -65,27 +23,7 @@ hr {
   </div>
 </div>
 
-<script>
-var countDownDate = new Date("Jan 5, 2020 12:00:01").getTime();
-var countdownfunction = setInterval(function() {
-  var now = new Date().getTime();
-    var distance = countDownDate - now;
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-    if (distance < 0) {
-    clearInterval(countdownfunction);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
-document.addEventListener('click', function(e){
-	var dbs = document.body.style.backgroundColor;
- 	document.body.style.backgroundColor = dbs === 'black' ? 'white': 'black';
-});
-</script>
 
+<script type="text/javascript" src="custom.js"></script>
 </body>
 </html>
